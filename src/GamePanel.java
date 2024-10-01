@@ -53,7 +53,7 @@ public class GamePanel extends JPanel implements ActionListener{
 
     public void move() {
         for (int i = length; i > 0; i--) {
-            // shift the snake one unit to the desired direction to create a move
+            // shift the snake one unit to the desired direction
             x[i] = x[i-1];
             y[i] = y[i-1];
         }
@@ -107,7 +107,7 @@ public class GamePanel extends JPanel implements ActionListener{
     }
 
     public void checkHit() {
-        // check if head run into its body
+        // check if Snake runs into its body
         for (int i = length; i > 0; i--) {
             if (x[0] == x[i] && y[0] == y[i]) {
                 running = false;
